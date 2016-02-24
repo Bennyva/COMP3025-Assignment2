@@ -47,6 +47,35 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(arrayList.toString());
     }
 
+    public void onClick(View v){
+        TextView textView = (TextView)findViewById(R.id.textView);
+
+        int calc = 0;
+        int c = arrayList.size();
+
+        while(c!=1){
+
+            if(arrayList.get(1).contains("+")){calc = Integer.parseInt(arrayList.get(0))+Integer.parseInt(arrayList.get(2));}
+            if(arrayList.get(1).contains("-")){calc = Integer.parseInt(arrayList.get(0))-Integer.parseInt(arrayList.get(2));}
+            if(arrayList.get(1).contains("*")){calc = Integer.parseInt(arrayList.get(0))*Integer.parseInt(arrayList.get(2));}
+            if(arrayList.get(1).contains("/")){calc = Integer.parseInt(arrayList.get(0))/Integer.parseInt(arrayList.get(2));}
+
+            textView.setText(Integer.toString(calc));
+
+
+
+        }
+    }
+
+    public void clear(View v){
+        TextView textView = (TextView)findViewById(R.id.textView);
+
+            string1 = "";
+            string = "";
+            textView.setText("0");
+            arrayList.clear();
+        }
+    }
 
 
 
@@ -54,4 +83,3 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-}
