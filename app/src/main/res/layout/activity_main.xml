@@ -30,7 +30,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="63dp"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_alignTop="@+id/btnNum1"
         android:layout_toRightOf="@+id/btnNum1"
         android:layout_toEndOf="@+id/btnNum1"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
         android:layout_alignTop="@+id/btnNum2"
         android:layout_toRightOf="@+id/btnNum2"
         android:layout_toEndOf="@+id/btnNum2"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
         android:layout_above="@+id/btnNum1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
         android:layout_above="@+id/btnNum2"
         android:layout_alignLeft="@+id/btnNum2"
         android:layout_alignStart="@+id/btnNum2"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -80,7 +80,7 @@
         android:layout_alignTop="@+id/btnNum5"
         android:layout_toRightOf="@+id/btnNum2"
         android:layout_toEndOf="@+id/btnNum2"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
         android:layout_above="@+id/btnNum4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
         android:layout_above="@+id/btnNum5"
         android:layout_alignLeft="@+id/btnNum5"
         android:layout_alignStart="@+id/btnNum5"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
         android:layout_above="@+id/btnNum6"
         android:layout_toRightOf="@+id/btnNum8"
         android:layout_toEndOf="@+id/btnNum8"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -120,7 +120,7 @@
         android:layout_alignTop="@+id/btnNum9"
         android:layout_toRightOf="@+id/btnNum6"
         android:layout_toEndOf="@+id/btnNum6"
-        android:onClick="onClick1"
+        android:onClick="btnOperation"
         android:background="#FFFFB265"/>
 
     <Button
@@ -131,7 +131,7 @@
         android:layout_below="@+id/btnMultiply"
         android:layout_alignLeft="@+id/btnMultiply"
         android:layout_alignStart="@+id/btnMultiply"
-        android:onClick="onClick1"
+        android:onClick="btnOperation"
         android:background="#FFFFB265"/>
 
     <Button
@@ -142,7 +142,7 @@
         android:layout_below="@+id/btnNum6"
         android:layout_toRightOf="@+id/btnNum3"
         android:layout_toEndOf="@+id/btnNum3"
-        android:onClick="onClick1"
+        android:onClick="btnOperation"
         android:background="#FFFFB265"/>
 
     <Button
@@ -155,7 +155,7 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btnNum3"
         android:layout_toStartOf="@+id/btnNum3"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -165,7 +165,7 @@
         android:layout_alignTop="@+id/btnNum0"
         android:layout_toRightOf="@+id/btnNum0"
         android:layout_toEndOf="@+id/btnNum0"
-        android:onClick="onClick1" />
+        android:onClick="btnNumberInput" />
 
     <Button
         android:layout_width="wrap_content"
@@ -177,7 +177,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/btnAddition"
         android:layout_alignStart="@+id/btnAddition"
-        android:onClick="onClick"
+        android:onClick="btnOperation"
         android:background="#FFFFB265"/>
 
     <Button
@@ -190,7 +190,7 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btnNum9"
         android:layout_toStartOf="@+id/btnNum9"
-        android:onClick="clear"/>
+        android:onClick="btnClear"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -211,7 +211,7 @@
         android:layout_alignParentEnd="true"
         android:layout_toRightOf="@+id/btnSign"
         android:layout_toEndOf="@+id/btnSign"
-        android:onClick="onClick1"
+        android:onClick="btnOperation"
         android:background="#ffb265"/>
 
 </RelativeLayout>

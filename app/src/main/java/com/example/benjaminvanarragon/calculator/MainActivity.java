@@ -11,39 +11,53 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    //variables for current number, results, current operation, and labels
-    TextView textView = (TextView) findViewById(R.id.textView);
-    float result = 0;
-    float currentNum = 0;
-    String currentNumString = "";
-    String currentOp = "";
-    String labelString = "";
-    float storedNum = 0;
-    String currentOperation = "";
+    float result;
+    float currentNum;
+    String currentNumString;
+    String currentOp;
+    String labelString;
+    float storedNum;
+    String currentOperation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //variables for current number, results, current operation, and labels
+
+        TextView textView = (TextView) findViewById(R.id.textView);
+        result = 0;
+        currentNum = 0;
+        currentNumString = "";
+        currentOp = "";
+        labelString = "";
+        storedNum = 0;
+        currentOperation = "";
+
         currentOp = "=";
         textView.setText(String.valueOf(result));
     }
+
+
 
     //This method fires when a number is pressed, it sets the current number to whatever the user is sending through this method. Then procedes to set the label to the current number.
     public void btnNumberInput(View v) {
         //sets the current number to what is sent
         //currentNum = currentNum * 10 + Float(sender.currentTitle!)!
-
+        TextView textView = (TextView) findViewById(R.id.textView);
+        Button button = (Button) v;
         labelString = textView.getText().toString();
 
 
-        if(labelString == "0"){
-            currentNumString = v.toString();
+        if(labelString == "0.0"){
+            currentNumString = button.getText().toString();
         }
         else{
-            currentNumString = currentNumString + v.toString();
+            currentNumString = currentNumString + button.getText().toString();
         }
-        currentNum = Float.parseFloat(currentNumString);
+        currentNum = Float.valueOf(currentNumString);
         System.out.println("\ncurrent num: " + currentNum);
         System.out.println("\nStored Num: " + result);
         System.out.println("\nResult: " + result);
@@ -55,8 +69,10 @@ public class MainActivity extends AppCompatActivity {
     //This method fires when an operation button is pressed. Each case will fire when the appropriate sign is clicked. Then sets the result label to the result.
     public void btnOperation(View v) {
 
+        TextView textView = (TextView) findViewById(R.id.textView);
+        Button button = (Button) v;
         //sets the current Operation to what is clicked
-        currentOp = v.toString();
+        currentOp = button.getText().toString();
         switch (currentOp){
             //all the math is done here
             case "=":
@@ -82,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("error");
                     textView.setText("err");
                 }
+                break;
 
             case "+":
                 //sets the current operation for the math function
@@ -91,24 +108,28 @@ public class MainActivity extends AppCompatActivity {
                 //rests the currentNum so a new value can be placed in the memory space
                 currentNumString = "0";
                 currentNum = 0;
+                break;
 
             case "-":
                 currentOperation = "-";
                 storedNum = currentNum;
                 currentNumString = "0";
                 currentNum = 0;
+                break;
 
             case "*":
                 currentOperation = "*";
                 storedNum = currentNum;
                 currentNumString = "0";
                 currentNum = 0;
+                break;
 
             case "/":
                 currentOperation = "/";
                 storedNum = currentNum;
                 currentNumString = "0";
                 currentNum = 0;
+                break;
 
 
                 //default switch case if none are available.
@@ -124,12 +145,14 @@ public class MainActivity extends AppCompatActivity {
         //    result = 0
         //}
         //sets the current operation to what is sent through the method
-        currentOp = v.toString();
+        currentOp = button.getText().toString();
     }
 
 
     //resets all variables to initial values, and clears the label
     public void btnClear(View v) {
+
+        TextView textView = (TextView) findViewById(R.id.textView);
         result = 0;
         currentNum = 0;
         currentOp = "=";
